@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  background-color: #060A0A;
+  color: #F4F6F6;
+  font-family: 'Geist', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+.hairline-grid {
+  background-color: #1C2D2B;
+  gap: 1px;
+}
+
+.hairline-border {
+  border: 1px solid #1C2D2B;
+}
+
+.hairline-b {
+  border-bottom: 1px solid #1C2D2B;
+}
+
+.hairline-t {
+  border-top: 1px solid #1C2D2B;
+}
