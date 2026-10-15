@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GardenShift — Il software verticale per i turni del tuo vivaio</title>
+  <meta name="description" content="GardenShift è la prima piattaforma di gestione turni, competenze e presenze progettata specificamente per vivai, serre e garden center. Elimina il caos del weekend in pochi click.">
+  <meta name="theme-color" content="#10B981">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              main: '#10B981',       // Primary Emerald
+              glow: 'rgba(16, 185, 129, 0.4)',
+              mint: '#6EE7B7',       // Mint accent
+              dark: '#080C0D',       // Dark background
+              card: '#121A1A',       // Card background
+              border: 'rgba(16, 185, 129, 0.2)',
+              teal: '#0A474B',       // Deep Botanical Teal
+              forest: '#002F32',     // Dark Forest
+              orange: '#EA580C',     // Warm Terracotta Accent
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #080C0D;
+      color: #F8FAFC;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .glow-emerald {
+      box-shadow: 0 0 40px -10px rgba(16, 185, 129, 0.35);
+    }
+    .glow-text {
+      text-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
+    }
+  </style>
+</head>
+<body class="min-h-screen antialiased flex flex-col justify-between selection:bg-emerald-500 selection:text-black">
+
+  <!-- Header / Navigation -->
+  <header class="border-b border-emerald-950/60 sticky top-0 bg-[#080C0D]/90 backdrop-blur z-50">
+    <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center text-xl shadow-lg shadow-emerald-500/20">
+          🌱
+        </div>
+        <div>
+          <span class="text-xl font-bold tracking-tight text-white">Garden<span class="text-[#10B981]">Shift</span></span>
+          <span class="block text-[10px] font-mono tracking-widest text-emerald-400 uppercase -mt-1">Botanical Tech</span>
+        </div>
+      </div>
+
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
+        <a href="#features" class="hover:text-emerald-400 transition">Funzionalità</a>
+        <a href="#reparti" class="hover:text-emerald-400 transition">Reparti Vivaio</a>
+        <a href="#vantaggi" class="hover:text-emerald-400 transition">Perché GardenShift</a>
+      </nav>
+
+      <div class="flex items-center space-x-4">
+        <a href="#demo" class="px-5 py-2.5 rounded-lg bg-[#10B981] hover:bg-emerald-400 text-black font-semibold text-sm transition shadow-lg shadow-emerald-500/20 flex items-center space-x-2">
+          <span>Richiedi Demo</span>
+          <span>→</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative pt-20 pb-28 px-6 overflow-hidden">
+    <!-- Ambient Glow -->
+    <div class="absolute top-10 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-emerald-500/15 blur-[120px] rounded-full pointer-events-none -z-10"></div>
+    
+    <div class="max-w-4xl mx-auto text-center space-y-8">
+      <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-950/40 text-emerald-400 text-xs font-mono tracking-wide">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span>SOFTWARE VERTICALE PER FLORICOLTURA & GARDEN CENTER</span>
+      </div>
+
+      <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white leading-[1.1]">
+        I turni del tuo vivaio,<br>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-emerald-500 glow-text">finalmente in ordine.</span>
+      </h1>
+
+      <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
+        Basta fogli Excel stropicciati e notifiche WhatsApp a mezzanotte. Pianifica reparti, picchi primaverili e domeniche con la prima piattaforma studiata per le esigenze dei garden center.
+      </p>
+
+      <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#demo" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-[#10B981] hover:bg-emerald-400 text-black font-bold text-base transition shadow-xl shadow-emerald-500/25 flex items-center justify-center space-x-2">
+          <span>Inizia Ora la Prova Gratuita</span>
+          <span>→</span>
+        </a>
+        <a href="#reparti" class="w-full sm:w-auto px-8 py-4 rounded-xl border border-slate-700 hover:border-emerald-500/50 bg-[#121A1A] text-slate-200 font-semibold text-base transition">
+          Scopri i Reparti Supportati
+        </a>
+      </div>
+
+      <!-- Quick Stats Bar -->
+      <div class="pt-12 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto border-t border-slate-800/80">
+        <div class="p-4 rounded-lg bg-[#121A1A]/60 border border-emerald-950/40">
+          <div class="text-2xl font-bold text-emerald-400 font-mono">-75%</div>
+          <div class="text-xs text-slate-400 mt-1">Tempo di pianificazione</div>
+        </div>
+        <div class="p-4 rounded-lg bg-[#121A1A]/60 border border-emerald-950/40">
+          <div class="text-2xl font-bold text-white font-mono">1-Click</div>
+          <div class="text-xs text-slate-400 mt-1">Sostituzione emergenze</div>
+        </div>
+        <div class="p-4 rounded-lg bg-[#121A1A]/60 border border-emerald-950/40">
+          <div class="text-2xl font-bold text-emerald-400 font-mono">100%</div>
+          <div class="text-xs text-slate-400 mt-1">Copertura weekend & feste</div>
+        </div>
+        <div class="p-4 rounded-lg bg-[#121A1A]/60 border border-emerald-950/40">
+          <div class="text-2xl font-bold text-[#EA580C] font-mono">Zero App</div>
+          <div class="text-xs text-slate-400 mt-1">Accesso immediato via PIN</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Grid -->
+  <section id="features" class="py-24 bg-[#0B1012] border-y border-emerald-950/40 px-6">
+    <div class="max-w-6xl mx-auto space-y-16">
+      <div class="text-center space-y-4 max-w-2xl mx-auto">
+        <span class="text-xs font-mono uppercase tracking-widest text-emerald-400">Architettura Fatta su Misura</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-white">Pensato per come funziona davvero un vivaio</h2>
+        <p class="text-slate-400 text-sm md:text-base">Nessun generico foglio di calcolo può comprendere le competenze florovivaistiche, le aperture domenicali e il turnover stagionale.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Feature 1 -->
+        <div class="p-8 rounded-2xl bg-[#121A1A] border border-emerald-500/20 hover:border-emerald-500/50 transition relative group">
+          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-2xl mb-6 border border-emerald-500/20">
+            📊
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Griglia Oraria Multi-Reparto</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Visualizza contemporaneamente Serra Calda, Vivaio Esterno, Casse e Logistica. Monitora a colpo d'occhio scoperture e riposi contrattuali.
+          </p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="p-8 rounded-2xl bg-[#121A1A] border border-emerald-500/20 hover:border-emerald-500/50 transition relative group">
+          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-2xl mb-6 border border-emerald-500/20">
+            🛡️
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Modalità Bozza Protetta</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Lavora ai turni della settimana successiva in totale tranquillità. Lo staff visualizza solo la versione definitiva quando premi "Pubblica".
+          </p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="p-8 rounded-2xl bg-[#121A1A] border border-emerald-500/20 hover:border-emerald-500/50 transition relative group">
+          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-2xl mb-6 border border-emerald-500/20">
+            ⚡
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Sostituzione Intelligente 1-Click</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Un'assenza improvvisa alle 7:30 di domenica mattina? L'algoritmo suggerisce istantaneamente i colleghi disponibili con le competenze idonee.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Demo Section -->
+  <section id="demo" class="py-24 px-6 relative">
+    <div class="max-w-4xl mx-auto rounded-3xl bg-gradient-to-b from-[#121A1A] to-[#0A474B]/30 border border-emerald-500/30 p-10 md:p-16 text-center space-y-6 glow-emerald">
+      <span class="inline-block px-3 py-1 rounded-full bg-emerald-400/10 border border-emerald-400/30 text-emerald-400 text-xs font-mono uppercase tracking-wider">
+        Inizia Subito
+      </span>
+      <h2 class="text-3xl md:text-5xl font-extrabold text-white">Pronto a semplificare la gestione del personale?</h2>
+      <p class="text-slate-300 max-w-xl mx-auto text-base">
+        Configura la struttura del tuo vivaio in 15 minuti e dimentica per sempre le emergenze organizzative.
+      </p>
+      <div class="pt-4 flex flex-col sm:flex-row justify-center gap-4">
+        <a href="mailto:info@gardenshift.it?subject=Richiesta%20Demo%20GardenShift" class="px-8 py-4 rounded-xl bg-[#10B981] hover:bg-emerald-400 text-black font-bold text-base transition shadow-lg shadow-emerald-500/20">
+          Richiedi una Demo Guidata
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-900 bg-[#060809] py-12 px-6 text-sm text-slate-500">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center space-x-3">
+        <span class="text-lg">🌿</span>
+        <span class="font-bold text-slate-300">GardenShift</span>
+        <span class="text-xs text-slate-600">© 2026 GardenShift · Tutti i diritti riservati</span>
+      </div>
+      <div class="flex items-center space-x-6 text-xs text-slate-400">
+        <span>Software B2B per Garden Center</span>
+        <span>•</span>
+        <span>Made with Botanical Tech</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
